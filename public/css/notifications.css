@@ -1,0 +1,316 @@
+/*==================================================
+              الإعدادات العامة للحاوية
+==================================================*/
+.employee-table-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 25px;
+}
+
+/*==================================================
+            الهيدر الرئيسي وتوزيع الأطراف
+
+
+/* الحاوية النصية للعنوان والوصف */
+/*==================================================
+            الهيدر الرئيسي وتوزيع الأطراف
+==================================================*/
+.page-header {
+    background: #fff;
+    border-radius: 20px;
+    padding: 25px 35px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .06);
+    
+    /* الخواص السحرية التي تدفع البطاقة لأقصى اليسار والعنوان لأقصى اليمين */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.page-header > div:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* محاذاة البداية لكل من العنوان والنص الفرعي */
+    text-align: right;       /* التأكيد على محاذاة النص لليمين */
+}
+
+.page-header h2 {
+    font-size: 34px;
+    color: #143d68;
+    font-weight: 700;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.page-header h2 i {
+    color: #d8b12b;
+    margin-left: 10px; /* مسافة بين الأيقونة والنص */
+    order: -1;        /* لضمان بقاء الأيقونة في أول النص على اليمين */
+}
+
+.page-header p {
+    color: #666;
+    font-size: 15px;
+    padding-right: 44px; /* تحريك النص الفرعي بمقدار عرض الأيقونة والمساحة لتصبح محاذية لبداية النص تماماً */
+    margin: 0;
+}
+
+/*==================================================
+         تعديل حاوية البطاقات لتتماشى في اليسار
+==================================================*/
+.statistics-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 0; /* إلغاء الهامش السفلي لأن الحاوية الأب تتحكم به الآن */
+}
+
+.stat-card {
+    width: 280px;
+    background: #fff;
+    border-radius: 18px;
+    padding: 18px 22px; /* تقليل الارتفاع الرأسي قليلاً */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    transition: .3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-card.blue {
+    border-right: 6px solid #1d4f91;
+}
+
+.stat-card h3 {
+    font-size: 38px;
+    color: #143d68;
+    margin: 0 0 6px 0; /* تصحيح الهامش العلوي */
+}
+
+.stat-card span {
+    color: #666;
+    font-size: 15px;
+}
+
+/* الأيقونة داخل البطاقة */
+.stat-card i, .stat-icon {
+    font-size: 42px;
+    color: #d8b12b;
+}
+/*==================================================
+                    أدوات التحكم
+==================================================*/
+.notification-tools {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.notification-tools form {
+    margin: 0;
+}
+
+.tool-btn {
+    background: #2C4C7C;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 28px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.3s ease;
+}
+
+.tool-btn:hover {
+    background: #1A3A5F;
+}
+
+/*==================================================
+              قائمة الإعدادات المنسدلة
+==================================================*/
+.settings-dropdown {
+    position: relative;
+}
+
+.settings-btn {
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,.08);
+    cursor: pointer;
+    font-size: 18px;
+    color: #2C4C7C;
+    transition: transform .3s ease;
+}
+
+.settings-btn:hover {
+    transform: rotate(90deg);
+}
+
+.settings-menu {
+    position: absolute;
+    left: 0;
+    top: 60px;
+    min-width: 220px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.12);
+    overflow: hidden;
+    display: none;
+    z-index: 1000;
+}
+
+.settings-menu.show {
+    display: block;
+}
+
+.settings-menu button {
+    width: 100%;
+    border: none;
+    background: none;
+    padding: 14px 18px;
+    text-align: right;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    transition: background .2s;
+}
+
+.settings-menu button:hover {
+    background: #f4f8ff;
+}
+
+/*==================================================
+                قائمة وبطاقات الإشعارات
+==================================================*/
+.notifications-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.notification-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.notification-card {
+    position: relative;
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    background: #fff;
+    border-radius: 18px;
+    padding: 20px;
+    border-right: 6px solid #ddd;
+    box-shadow: 0 6px 18px rgba(0,0,0,.06);
+    transition: all .3s ease;
+}
+
+.notification-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0,0,0,.10);
+}
+
+/* حالات الإشعارات (مقروء / غير مقروء) */
+.notification-card.read {
+    opacity: .85;
+}
+
+.notification-card.unread {
+    box-shadow: 0 0 0 2px rgba(26,58,95,.10), 0 8px 20px rgba(26,58,95,.12);
+}
+
+.notification-card.unread::before {
+    content: 'جديد';
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    background: #D32F2F;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* محتوى بطاقة الإشعار بعد الإصلاح */
+.notification-content {
+    flex: 1;
+}
+
+.notification-content h3 {
+    margin: 0 0 8px 0;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.notification-content p {
+    color: #666;
+    margin: 0 0 8px 0;
+    line-height: 1.8;
+}
+
+.notification-content span {
+    color: #999;
+    font-size: 13px;
+}
+
+/* الألوان الخاصة بنوع كل إشعار */
+.notification-card.submitted { border-right-color: #1976D2; }
+.notification-card.submitted h3 { color: #1976D2; }
+
+.notification-card.received { border-right-color: #00897B; }
+.notification-card.received h3 { color: #00897B; }
+
+.notification-card.approved { border-right-color: #2E7D32; }
+.notification-card.approved h3 { color: #2E7D32; }
+
+.notification-card.rejected { border-right-color: #D32F2F; }
+.notification-card.rejected h3 { color: #D32F2F; }
+
+.notification-card.review { border-right-color: #F9A825; }
+.notification-card.review h3 { color: #F9A825; }
+
+.notification-card.warning { border-right-color: #ED6C02; }
+.notification-card.warning h3 { color: #ED6C02; }
+
+/*==================================================
+            واجهة الصفحة الفارغة والترقيم
+==================================================*/
+.empty-table {
+    background: #fff;
+    border-radius: 20px;
+    padding: 70px 30px;
+    text-align: center;
+    color: #777;
+    box-shadow: 0 8px 20px rgba(0,0,0,.06);
+}
+
+.empty-table i {
+    color: #2C4C7C;
+    margin-bottom: 15px;
+}
+
+.pagination-wrapper {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}

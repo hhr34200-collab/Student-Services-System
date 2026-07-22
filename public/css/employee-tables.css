@@ -1,0 +1,282 @@
+/*==================================================
+        الخط العام
+==================================================*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.employee-table-page{
+    width:100%;
+    padding:25px;
+    animation:fadeIn .4s ease;
+}
+
+/*==================================================
+        عنوان الصفحة والبطاقات (دمج في سطر واحد)
+==================================================*/
+/*==================================================
+        عنوان الصفحة والبطاقات (دمج في سطر واحد)
+==================================================*/
+.page-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+    direction: rtl; /* ضمان أن يكون الاتجاه من اليمين إلى اليسار */
+}
+
+/* الحاوية النصية للعنوان والوصف */
+.page-header > div:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* محاذاة البداية لكل من العنوان والنص الفرعي */
+    text-align: right;       /* التأكيد على محاذاة النص لليمين */
+}
+
+.page-header h2{
+    font-size:34px;
+    color:#143d68;
+    font-weight:700;
+    margin-bottom:8px;
+    display: flex;
+    align-items: center;
+}
+
+.page-header h2 i{
+    color:#d8b12b;
+    margin-left:10px; /* مسافة بين الأيقونة والنص */
+    order: -1;        /* لضمان بقاء الأيقونة في أول النص على اليمين */
+}
+
+.page-header p{
+    color:#666;
+    font-size:15px;
+    padding-right:44px; /* تحريك النص الفرعي بمقدار عرض الأيقونة والمساحة لتصبح محاذية لبداية النص تماماً */
+    margin: 0;
+}
+/* تعديل حاوية البطاقات لتتماشى في اليسار */
+.statistics-row{
+    display:flex;
+    gap:20px;
+    margin-bottom:0; /* إلغاء الهامش السفلي لأن الحاوية الأب تتحكم به الآن */
+}
+
+.stat-card{
+    width:280px;
+    background:#fff;
+    border-radius:18px;
+    padding:18px 22px; /* تقليل الارتفاع الرأسي قليلاً */
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.stat-card:hover{
+    transform:translateY(-5px);
+}
+
+.stat-card.blue{
+    border-right:6px solid #1d4f91;
+}
+
+.stat-card h3{
+    font-size:38px;
+    color:#143d68;
+    margin-bottom:6px;
+}
+
+.stat-card span{
+    color:#666;
+    font-size:15px;
+}
+
+.stat-card i{
+    font-size:42px;
+    color:#d8b12b;
+}
+
+/*==================================================
+        مربع البحث
+==================================================*/
+.search-box{
+    width:100%;
+    background:#fff;
+    border-radius:15px;
+    padding:14px 18px;
+    display:flex;
+    align-items:center;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+    margin-bottom:20px; /* تقليل الفراغ بين صندوق البحث والجدول */
+}
+
+.search-box i{
+    color:#143d68;
+    font-size:18px;
+    margin-left:12px;
+}
+
+.search-box input{
+    border:none;
+    outline:none;
+    width:100%;
+    font-size:15px;
+    font-family:Cairo;
+    background:transparent;
+}
+
+/*==================================================
+        الجدول
+==================================================*/
+.table-card{
+    background:#fff;
+    border-radius:18px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    overflow:auto;
+}
+
+#requestsTable{
+    width:100%;
+    border-collapse:collapse;
+    min-width:900px;
+}
+
+#requestsTable thead{
+    background:#143d68;
+}
+
+#requestsTable thead th{
+    color:#fff;
+    padding:18px;
+    font-size:15px;
+    text-align:center;
+}
+
+#requestsTable tbody td{
+    padding:16px;
+    text-align:center;
+    border-bottom:1px solid #ececec;
+    font-size:15px;
+}
+
+/*==================================================
+        حالة الطلب
+==================================================*/
+.status-badge{
+    display:inline-block;
+    padding:8px 18px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:bold;
+    color:#fff;
+}
+
+/* شؤون الطلاب */
+.status-student{ background:#0d6efd; }
+/* رئيس القسم */
+.status-department{ background:#fd7e14; }
+/* الأرشيف */
+.status-archive{ background:#6f42c1; }
+/* مؤرشف */
+.status-approved{ background:#198754; }
+/* إعادة */
+.status-return{ background:#dc3545; }
+
+/*==================================================
+        زر العرض
+==================================================*/
+.btn-view{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:#143d68;
+    color:#fff;
+    padding:10px 18px;
+    border-radius:8px;
+    text-decoration:none;
+    font-size:14px;
+    transition:.3s;
+}
+
+.btn-view:hover{
+    background:#0d2f52;
+    color:#fff;
+    transform:translateY(-2px);
+}
+
+/*==================================================
+        لا توجد بيانات
+==================================================*/
+.empty-table{
+    padding:40px !important;
+    color:#777;
+    font-size:16px;
+}
+
+/*==================================================
+        حركة بسيطة
+==================================================*/
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/*=========================================
+            صفوف الجدول
+==========================================*/
+#requestsTable tbody tr:nth-child(even){
+    background:#f8fbff;
+}
+
+#requestsTable tbody tr:nth-child(odd){
+    background:#ffffff;
+}
+
+#requestsTable tbody tr{
+    transition:.25s;
+}
+
+#requestsTable tbody tr:hover{
+    background:#edf5ff;
+    transform:scale(1.003);
+}
+
+#requestsTable tbody td{
+    border-bottom:1px solid #edf1f7;
+}
+
+#requestsTable{
+    border-radius:12px;
+    overflow:hidden;
+}
+
+.pagination-wrapper{
+    margin-top:25px;
+    display:flex;
+    justify-content:center;
+}
+/*==========================================
+            زر الطباعة
+==========================================*/
+
+.btn-print{
+
+    background:#198754;
+
+}
+
+.btn-print:hover{
+
+    background:#157347;
+
+}

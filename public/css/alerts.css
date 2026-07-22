@@ -1,0 +1,219 @@
+/*==========================================
+        Student Services Alert
+==========================================*/
+
+/* نافذة SweetAlert */
+
+.custom-alert{
+
+    width:430px !important;
+
+    max-width:90% !important;
+
+    padding:0 !important;
+
+    border-radius:18px !important;
+
+    overflow:hidden;
+
+    background:#fff !important;
+
+    font-family:'Cairo',sans-serif !important;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.10);
+
+    border:2px solid transparent !important;
+
+}
+
+/* لون الإطار حسب نوع الرسالة */
+
+.success-popup{
+
+    border-color:#2E7D32 !important;
+
+}
+
+.error-popup{
+
+    border-color:#D32F2F !important;
+
+}
+
+.warning-popup{
+
+    border-color:#ED6C02 !important;
+
+}
+
+.info-popup{
+
+    border-color:#1976D2 !important;
+
+}
+
+/* البطاقة */
+
+.alert-card{
+
+    padding:24px;
+
+    background:#fff;
+
+}
+
+/* رأس الرسالة */
+
+.alert-header{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    margin-bottom:18px;
+
+}
+
+/* الأيقونة */
+
+.alert-icon{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#fff;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    flex-shrink:0;
+
+}
+
+/* ألوان الأيقونة */
+
+.success-popup .alert-icon{
+
+    background:#2E7D32;
+
+}
+
+.error-popup .alert-icon{
+
+    background:#D32F2F;
+
+}
+
+.warning-popup .alert-icon{
+
+    background:#ED6C02;
+
+}
+
+.info-popup .alert-icon{
+
+    background:#1976D2;
+
+}
+
+/* العنوان */
+
+.alert-title{
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:#1A3A5F;
+
+    line-height:1;
+
+}
+
+/* الرسالة */
+
+.alert-message{
+
+    text-align:center;
+
+    color:#666;
+
+    font-size:15px;
+
+    line-height:2;
+
+    margin-top:10px;
+
+}
+
+/* لون عنوان الرسالة */
+
+.success-popup .alert-title{
+
+    color:#2E7D32;
+
+}
+
+.error-popup .alert-title{
+
+    color:#D32F2F;
+
+}
+
+.warning-popup .alert-title{
+
+    color:#ED6C02;
+
+}
+
+.info-popup .alert-title{
+
+    color:#1976D2;
+
+}
+
+/* الأزرار */
+
+.swal2-actions{
+
+    margin:0 0 22px !important;
+
+}
+
+.swal2-confirm{
+
+    background:#2C4C7C !important;
+
+    border-radius:10px !important;
+
+    padding:10px 28px !important;
+
+    font-family:'Cairo',sans-serif !important;
+
+    font-size:14px !important;
+
+    font-weight:700 !important;
+
+    box-shadow:none !important;
+
+}
+
+.swal2-confirm:hover{
+
+    background:#1A3A5F !important;
+
+}

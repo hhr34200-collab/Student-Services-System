@@ -1,0 +1,310 @@
+/* ==========================
+   إعدادات عامة
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Cairo',sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+}
+
+a{
+    text-decoration:none;
+}
+
+/* ==========================
+   الهيكل الرئيسي
+========================== */
+
+.admin-layout{
+    display:flex;
+    min-height:100vh;
+}
+
+/* ==========================
+   القائمة الجانبية
+========================== */
+
+.sidebar{
+    width:280px;
+    background:linear-gradient(180deg,#0F4C81,#0b3960);
+    color:white;
+    position:fixed;
+    right:0;
+    top:0;
+    bottom:0;
+    overflow-y:auto;
+    box-shadow:-5px 0 20px rgba(0,0,0,.1);
+}
+
+/* ==========================
+   رأس القائمة
+========================== */
+
+.sidebar-header{
+    text-align:center;
+    padding:25px;
+    border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+.logo{
+    width:90px;
+    height:90px;
+    object-fit:contain;
+    margin-bottom:15px;
+}
+
+.sidebar-header h2{
+    font-size:28px;
+    margin-bottom:8px;
+}
+
+.sidebar-header p{
+    color:#dbeafe;
+    font-size:14px;
+}
+
+/* ==========================
+   عناصر القائمة
+========================== */
+
+.sidebar-menu{
+    list-style:none;
+    padding:20px;
+}
+
+.sidebar-menu li{
+    margin-bottom:10px;
+}
+
+.sidebar-menu a{
+    display:flex;
+    align-items:center;
+    flex-direction:row-reverse;
+    gap:15px;
+    color:white;
+    padding:14px 18px;
+    border-radius:12px;
+    transition:.3s;
+}
+
+.sidebar-menu span{
+    flex:1;
+    text-align:right;
+}
+
+.sidebar-menu a:hover{
+    background:rgba(255,255,255,.12);
+    transform:translateX(-8px);
+    border-right:4px solid #d4af37;
+}
+
+.sidebar-menu a.active{
+    background:rgba(255,255,255,.15);
+    border-right:4px solid #10B981;
+}
+
+.sidebar-menu i{
+    font-size:18px;
+}
+
+/* ==========================
+   المحتوى الرئيسي
+========================== */
+
+.main-content{
+    flex:1;
+    margin-right:280px;
+    min-height:100vh;
+}
+
+/* ==========================
+   الشريط العلوي
+========================== */
+
+.topbar{
+    height:75px;
+    background:white;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 25px;
+    box-shadow:0 2px 10px rgba(0,0,0,.05);
+}
+
+/* عنوان الصفحة */
+
+.page-title{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:#0F4C81;
+    font-size:24px;
+    font-weight:700;
+}
+
+/* أيقونات التوب بار */
+
+.topbar-left{
+    display:flex;
+    gap:10px;
+}
+
+.icon-btn{
+    width:42px;
+    height:42px;
+    border:none;
+    border-radius:10px;
+    background:#f4f7fb;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.icon-btn:hover{
+    background:#0F4C81;
+    color:white;
+}
+
+/* ==========================
+   معلومات المدير
+========================== */
+
+.admin-profile{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.profile-img{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.profile-info{
+    display:flex;
+    flex-direction:column;
+}
+
+.profile-info h4{
+    margin:0;
+    color:#0F4C81;
+    font-size:15px;
+}
+
+.profile-info span{
+    color:#777;
+    font-size:13px;
+}
+
+/* ==========================
+   محتوى الصفحات
+========================== */
+
+.page-content{
+    padding:30px;
+}
+
+/* ==========================
+   الموبايل
+========================== */
+
+@media(max-width:900px){
+
+    .sidebar{
+        width:100%;
+        position:relative;
+    }
+
+    .main-content{
+        margin-right:0;
+    }
+
+    .admin-layout{
+        flex-direction:column;
+    }
+
+    .topbar{
+        flex-wrap:wrap;
+        height:auto;
+        padding:15px;
+        gap:15px;
+    }
+
+    .page-title{
+        font-size:18px;
+    }
+}
+/*==========================
+    تسجيل الخروج
+==========================*/
+
+.logout-form{
+
+    width:100%;
+
+    margin:0;
+
+}
+
+.logout-btn{
+
+    width:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    flex-direction:row-reverse;
+
+    gap:15px;
+
+    padding:14px 18px;
+
+    background:transparent;
+
+    border:none;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    font-family:'Cairo',sans-serif;
+
+    font-size:16px;
+
+    border-radius:12px;
+
+    transition:.3s;
+
+}
+
+.logout-btn span{
+
+    flex:1;
+
+    text-align:right;
+
+}
+
+.logout-btn i{
+
+    font-size:18px;
+
+}
+
+.logout-btn:hover{
+
+    background:rgba(255,255,255,.12);
+
+    transform:translateX(-8px);
+
+    border-right:4px solid #d4af37;
+
+}

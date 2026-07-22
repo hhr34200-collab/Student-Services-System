@@ -1,0 +1,634 @@
+/*==========================================================
+    تنسيق عام للصفحة
+    ==========================================================
+    يطبق على جميع صفحات الموظف ويزيل الهوامش الافتراضية.
+==========================================================*/
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+body{
+
+    font-family:'Cairo',sans-serif;
+
+    background:#F4F7FC;
+
+    direction:rtl;
+
+}
+
+
+/*==========================================================
+    الهيكل الرئيسي للواجهة
+    ==========================================================
+    يقسم الصفحة إلى:
+    - قائمة جانبية
+    - محتوى رئيسي
+==========================================================*/
+
+.employee-layout{
+
+    display:flex;
+
+    min-height:100vh;
+
+}
+
+
+/*==========================================================
+    القائمة الجانبية
+==========================================================*/
+
+.sidebar{
+
+    width:270px;
+
+    background:#0B3D66;
+
+    color:white;
+
+    display:flex;
+
+    flex-direction:column;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.15);
+
+}
+
+
+/*==========================================================
+    رأس القائمة الجانبية
+==========================================================*/
+
+.sidebar-header{
+
+    text-align:center;
+
+    padding:30px 20px;
+
+    border-bottom:1px solid rgba(255,255,255,.15);
+
+}
+
+
+/*==========================================================
+    شعار الجامعة
+==========================================================*/
+
+.logo{
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    border:3px solid white;
+
+    margin-bottom:15px;
+
+}
+
+
+/*==========================================================
+    اسم الجامعة
+==========================================================*/
+
+.sidebar-header h2{
+
+    font-size:22px;
+
+    margin-bottom:8px;
+
+}
+
+
+/*==========================================================
+    اسم النظام
+==========================================================*/
+
+.sidebar-header p{
+
+    font-size:14px;
+
+    color:#d6d6d6;
+
+}
+
+
+/*==========================================================
+    قائمة التنقل
+==========================================================*/
+
+.sidebar-menu{
+
+    list-style:none;
+
+    padding:20px 0;
+
+    flex:1;
+
+}
+
+
+/*==========================================================
+    عنصر داخل القائمة
+==========================================================*/
+
+.sidebar-menu li{
+
+    margin:8px 15px;
+
+}
+
+
+/*==========================================================
+    روابط القائمة
+==========================================================*/
+
+.sidebar-menu a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:15px 18px;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:15px;
+
+    transition:.3s;
+
+}
+
+
+/*==========================================================
+    تأثير المرور على عناصر القائمة
+==========================================================*/
+
+.sidebar-menu a:hover{
+
+    background:#D4AF37;
+
+    color:#0B3D66;
+
+    transform:translateX(-5px);
+
+}
+
+
+/*==========================================================
+    أيقونات القائمة
+==========================================================*/
+
+.sidebar-menu i{
+
+    width:22px;
+
+    text-align:center;
+
+    font-size:18px;
+
+}
+
+
+/*==========================================================
+    الجزء السفلي من القائمة
+==========================================================*/
+
+.sidebar-footer{
+
+    padding:20px;
+
+    border-top:1px solid rgba(255,255,255,.15);
+
+}
+
+
+/*==========================================================
+    زر تسجيل الخروج
+==========================================================*/
+
+.logout-btn{
+
+    width:100%;
+
+    border:none;
+
+    background:#C62828;
+
+    color:white;
+
+    padding:14px;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    transition:.3s;
+
+}
+
+
+.logout-btn:hover{
+
+    background:#B71C1C;
+
+}
+
+
+/*==========================================================
+    المحتوى الرئيسي
+==========================================================*/
+
+.main-content{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    background:#F4F7FC;
+
+}
+
+
+/*==========================================================
+    الشريط العلوي
+==========================================================*/
+
+.topbar{
+
+    background:white;
+
+    height:90px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 30px;
+
+    box-shadow:0 3px 15px rgba(0,0,0,.05);
+
+}
+
+
+/*==========================================================
+    عنوان الصفحة
+==========================================================*/
+
+.page-title h2{
+
+    color:#0B3D66;
+
+    margin-bottom:5px;
+
+}
+
+
+.page-title p{
+
+    color:#666;
+
+}
+
+
+/*==========================================================
+    أدوات الشريط العلوي
+==========================================================*/
+
+.topbar-tools{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+
+}
+
+
+/*==========================================================
+    زر الجرس
+==========================================================*/
+
+.icon-btn{
+
+    position:relative;
+
+    width:50px;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#F4F7FC;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+.icon-btn:hover{
+
+    background:#0B3D66;
+
+    color:white;
+
+}
+
+
+/*==========================================================
+    رقم الإشعارات
+==========================================================*/
+
+.notification-count{
+
+    position:absolute;
+
+    top:-5px;
+
+    right:-5px;
+
+    width:22px;
+
+    height:22px;
+
+    border-radius:50%;
+
+    background:#E53935;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:12px;
+
+}
+
+
+/*==========================================================
+    معلومات الموظف
+==========================================================*/
+
+.employee-info{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+
+/*==========================================================
+    صورة الموظف
+==========================================================*/
+
+.profile-img{
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    border:2px solid #D4AF37;
+
+}
+
+
+/*==========================================================
+    اسم الموظف
+==========================================================*/
+
+.employee-info h4{
+
+    color:#0B3D66;
+
+    margin-bottom:4px;
+
+}
+
+
+/*==========================================================
+    المسمى الوظيفي
+==========================================================*/
+
+.employee-info span{
+
+    color:#777;
+
+    font-size:14px;
+
+}
+
+
+/*==========================================================
+    منطقة عرض الصفحات
+==========================================================*/
+
+.page-content{
+
+    padding:30px;
+
+}
+/*=============================================
+        Notification Dropdown
+==============================================*/
+
+.notification-box{
+
+    position:relative;
+
+}
+
+.notification-dropdown{
+
+    position:absolute;
+
+    top:60px;
+
+    left:0;
+
+    width:340px;
+
+    background:#fff;
+
+    border-radius:16px;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.15);
+
+    overflow:hidden;
+
+    display:none;
+
+    z-index:999;
+
+}
+
+.notification-dropdown.show{
+
+    display:block;
+
+}
+
+.dropdown-item{
+
+    display:flex;
+
+    flex-direction:column;
+
+    padding:15px 18px;
+
+    text-decoration:none;
+
+    color:#333;
+
+    border-bottom:1px solid #eee;
+
+    transition:.25s;
+
+}
+
+.dropdown-item:hover{
+
+    background:#f4f8ff;
+
+}
+
+.dropdown-item strong{
+
+    color:#1A3A5F;
+
+    margin-bottom:6px;
+
+}
+
+.dropdown-item small{
+
+    color:#777;
+
+}
+
+.dropdown-empty{
+
+    padding:25px;
+
+    text-align:center;
+
+    color:#888;
+
+}
+
+.view-all{
+
+    display:block;
+
+    text-align:center;
+
+    padding:15px;
+
+    background:#1A3A5F;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+}
+
+.view-all:hover{
+
+    background:#16304f;
+
+}
+.logout-link{
+
+    width:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:15px 18px;
+
+    background:none;
+
+    border:none;
+
+    color:white;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    font-family:'Cairo',sans-serif;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+
+
+.logout-link:hover{
+
+    background:#D4AF37;
+
+    color:#0B3D66;
+
+    transform:translateX(-5px);
+
+}
+
+.logout-link:hover i{
+
+    color:#0B3D66;
+
+}
+
+
+
+.logout-link i{
+
+    width:22px;
+
+    text-align:center;
+
+    font-size:18px;
+
+    color:#D4AF37;
+
+}
