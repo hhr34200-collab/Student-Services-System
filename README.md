@@ -82,7 +82,7 @@
 | Frontend | JavaScript | التفاعل مع المستخدم |
 | Build Tool | Vite | تجميع ملفات الواجهة |
 | Database | MySQL | إدارة البيانات |
-| ORM | Eloquent ORM |التعامل مع قاعدة البيانات من خلال نماذج (Models) دون الحاجة إلى كتابة استعلامات SQL مباشرة |
+| ORM | Eloquent ORM | التعامل مع قاعدة البيانات من خلال نماذج (Models) دون الحاجة إلى كتابة استعلامات SQL مباشرة |
 | Realtime | Laravel Reverb | الإشعارات الفورية |
 | Reports | mPDF | إنشاء ملفات PDF |
 
